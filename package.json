@@ -1,0 +1,26 @@
+{
+  "name": "pattern-figure-image",
+  "version": "0.0.1",
+  "description": "A system-agnostic HTML pattern for a figure element containing an image",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pattern-library/pattern-figure-image.git"
+  },
+  "keywords": [
+    "pattern-html",
+    "pattern-library"
+  ],
+  "author": "Scott Nath",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pattern-library/pattern-figure-image/issues"
+  },
+  "homepage": "https://github.com/pattern-library/pattern-figure-image#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
