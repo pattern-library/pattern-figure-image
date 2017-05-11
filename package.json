@@ -4,6 +4,8 @@
   "description": "A system-agnostic HTML pattern for a figure element containing an image",
   "main": "index.js",
   "scripts": {
+    "ava": "ava",
+    "test": "npm run ava"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,14 @@
   },
   "homepage": "https://github.com/pattern-library/pattern-figure-image#readme",
   "devDependencies": {
+    "ava": "^0.19.1"
   },
-  "dependencies": {
+  "dependencies": {},
+  "ava": {
+    "files": [
+      "tests/*.js"
+    ],
+    "failFast": false,
+    "tap": true
   }
 }
