@@ -26,21 +26,34 @@
   "homepage": "https://github.com/pattern-library/pattern-figure-image#readme",
   "devDependencies": {
     "ava": "^0.19.1",
+    "babel": "6.5.2",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "babel-register": "6.9.0",
+    "enzyme": "^2.8.2",
     "eslint-plugin-ava": "^4.2.0",
     "jsdom": "^10.1.0",
-    "lodash": "^4.17.4",
+    "jsdom-global": "^3.0.2",
     "nunjucks": "^3.0.0",
     "nyc": "^10.3.2",
-    "punchcard-runner": "^2.1.3"
+    "punchcard-runner": "^2.1.3",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4"
   },
   "dependencies": {
-    "nunjucks-add-attrs-filter": "0.0.1"
+    "lodash": "^4.17.4",
+    "nunjucks-add-attrs-filter": "0.0.1",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4"
   },
   "nyc": {
     "exclude": [
       "tests/**/*",
       "Gulpfile.js",
       "coverage"
+    ],
+    "extension": [
+      ".jsx"
     ]
   },
   "ava": {
@@ -48,6 +61,10 @@
       "tests/*.js"
     ],
     "failFast": false,
-    "tap": true
+    "tap": true,
+    "babel": "inherit",
+    "require": [
+      "./tests/helpers/setup-test-env.js"
+    ]
   }
 }
