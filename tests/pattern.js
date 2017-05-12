@@ -1,6 +1,5 @@
 import test from 'ava';
 import fs from 'fs';
-import path from 'path';
 import { JSDOM } from 'jsdom';
 
 import plugin from '../';
@@ -38,4 +37,4 @@ test('default pattern', t => {
   t.true(frag.querySelector('figcaption') !== null, 'has a figcaption element');
   t.is(frag.querySelector('figcaption').textContent, content.figcaption.content, 'figcaption has default content');
   t.is(frag.querySelector('figure').lastElementChild, frag.querySelector('figcaption'), 'figcaption is second element');
-})
+});
