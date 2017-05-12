@@ -23,5 +23,6 @@ module.exports = {
   },
   versions: {
     default: './src/figure-image.html',
+    nunjucks: 'src/figure-image.njk',
   },
 };
