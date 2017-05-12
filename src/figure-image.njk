@@ -1,0 +1,19 @@
+{% if figcaption.content %}
+  {% set caption %}
+    <figcaption {{ figcaption | attrs('content') | safe }}>{{figcaption.content}}</figcaption>
+  {% endset %}
+
+  {% if figcaption.before and figcaption.before == true %}
+    {% set before = 'true' %}
+  {% endif %}
+{% endif %}
+
+<figure {{ figure | attrs | safe }}>
+  {% if (caption) and (before) %}
+    {{caption | safe}}
+  {% endif %}
+  <img src="{{img.src}}" alt="{{img.alt}}" {{ img | attrs(['src', 'alt']) | safe }}>
+  {% if (caption) and not (before) %}
+    {{caption | safe}}
+  {% endif %}
+</figure>

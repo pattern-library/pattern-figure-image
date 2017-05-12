@@ -3,6 +3,7 @@ import fs from 'fs';
 import { JSDOM } from 'jsdom';
 
 import plugin from '../';
+import defaultTest from './helpers/default.js';
 
 let pattern;
 
@@ -29,12 +30,5 @@ test('default pattern', t => {
   const content = plugin.content;
   const frag = JSDOM.fragment(pattern);
 
-  t.true(frag.querySelector('figure') !== null, 'has a figure element');
-  t.true(frag.querySelector('figure').classList.contains(content.figure.class), 'figure element has default className');
-  t.true(frag.querySelector('img') !== null, 'has an image element');
-  t.is(frag.querySelector('img').getAttribute('src'), content.img.src, 'image has default image url');
-  t.is(frag.querySelector('img').getAttribute('alt'), content.img.alt, 'image has default image alternate text');
-  t.true(frag.querySelector('figcaption') !== null, 'has a figcaption element');
-  t.is(frag.querySelector('figcaption').textContent, content.figcaption.content, 'figcaption has default content');
-  t.is(frag.querySelector('figure').lastElementChild, frag.querySelector('figcaption'), 'figcaption is second element');
+  defaultTest(t, frag, content);
 });
