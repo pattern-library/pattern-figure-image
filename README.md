@@ -12,3 +12,10 @@ A `figure` element with an `img` element and an optional `figcaption`.
   <figcaption>Foo image caption</figcaption>
 </figure>
 ```
+
+## npm scripts
+
+* `npm run lint` - lints Javascript
+* `npm run ava` - runs unit tests
+* `npm run nyc` - runs unit tests, then runs code coverage
+* `npm test` - runs `npm pretest` first, which runs the linting, then ava, then nyc
