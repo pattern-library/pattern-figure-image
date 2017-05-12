@@ -12,7 +12,7 @@ const defaultTest = (test, fragment, content) => {
   test.is(fragment.querySelector('img').getAttribute('src'), content.img.src, 'image has default image url');
   test.is(fragment.querySelector('img').getAttribute('alt'), content.img.alt, 'image has default image alternate text');
   test.true(fragment.querySelector('figcaption') !== null, 'has a figcaption element');
-  test.is(fragment.querySelector('figcaption').textContent, content.figcaption.content, 'figcaption has default content');
+  test.is(fragment.querySelector('figcaption').textContent.trim(), content.figcaption.content, 'figcaption has default content');
   test.is(fragment.querySelector('figure').lastElementChild, fragment.querySelector('figcaption'), 'figcaption is second element');
 };
 
