@@ -11,7 +11,7 @@ module.exports = {
   description: 'A system-agnostic HTML pattern for a figure element containing an image',
   content: {
     figure: {
-      class: 'figure--image',
+      class: 'figure-image',
     },
     img: {
       alt: 'Foo Image',

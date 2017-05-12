@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/pattern-library/pattern-figure-image#readme",
   "devDependencies": {
-    "ava": "^0.19.1"
+    "ava": "^0.19.1",
+    "jsdom": "^10.1.0"
   },
   "dependencies": {},
   "ava": {
